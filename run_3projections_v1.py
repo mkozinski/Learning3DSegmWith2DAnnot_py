@@ -103,7 +103,7 @@ testimgs=[]
 testlbls=[]
 for f in testFiles:
   img   =np.load(os.path.join(datadir,f[0]))
-  lbl   =np.load(os.path.join(datadir,f[2]))
+  lbl   =np.load(os.path.join(datadir,f[2])).astype(np.uint8)
   testimgs.append(img.astype(np.float32))
   testlbls.append(lbl-1)
 
